@@ -34,3 +34,5 @@ class IntroducingJsx extends React.Component {
       return element;
     }
 };
+
+export default IntroducingJsx;
