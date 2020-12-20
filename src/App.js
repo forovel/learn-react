@@ -12,6 +12,8 @@ import StateAndLifecycle from "./components/StateAndLifecycle/StateAndLifecycle"
 import HandlingEvents from "./components/HandlingEvents/HandlingEvents";
 import ConditionalRendering from "./components/ConditionalRendering/ConditionalRendering";
 import ListsAndKeys from "./components/ListsAndKeys/ListsAndKeys";
+import Forms from "./components/Forms/Forms";
+import LiftingStateUp from "./components/LiftingStateUp/LiftingStateUp";
 
 function App() {
   return (
@@ -42,6 +44,12 @@ function App() {
             <li>
               <a href="/8">8. Lists and Keys</a>
             </li>
+            <li>
+              <a href="/9">9. Forms</a>
+            </li>
+            <li>
+              <a href="/10">10. Lifting State Up</a>
+            </li>
           </ul>
         </nav>
         <BrowserRouter>
@@ -69,6 +77,12 @@ function App() {
             </Route>
             <Route path="/8">
               <ListsAndKeys />
+            </Route>
+            <Route path="/9">
+              <Forms />
+            </Route>
+            <Route path="/10">
+              <LiftingStateUp />
             </Route>
           </Switch>
         </BrowserRouter>
