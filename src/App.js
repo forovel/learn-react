@@ -14,6 +14,7 @@ import ConditionalRendering from "./components/ConditionalRendering/ConditionalR
 import ListsAndKeys from "./components/ListsAndKeys/ListsAndKeys";
 import Forms from "./components/Forms/Forms";
 import LiftingStateUp from "./components/LiftingStateUp/LiftingStateUp";
+import CompositionVsInheritance from "./components/CompositionVsInheritance/CompositionVsInheritance";
 
 function App() {
   return (
@@ -50,6 +51,9 @@ function App() {
             <li>
               <a href="/10">10. Lifting State Up</a>
             </li>
+            <li>
+              <a href="/11">11. Composition vs Inheritance</a>
+            </li>
           </ul>
         </nav>
         <BrowserRouter>
@@ -83,6 +87,9 @@ function App() {
             </Route>
             <Route path="/10">
               <LiftingStateUp />
+            </Route>
+            <Route path="/11">
+              <CompositionVsInheritance />
             </Route>
           </Switch>
         </BrowserRouter>
