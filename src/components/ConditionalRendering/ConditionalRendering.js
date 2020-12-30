@@ -3,12 +3,10 @@ import React from 'react';
 class ConditionalRendering extends React.Component {
     constructor(props) {
         super(props);
-        this.handleLoginClick = this.handleLoginClick.bind(this);
-        this.handleLogoutClick = this.handleLogoutClick.bind(this);
         this.state = { isLoggedIn: false };
     }
     
-    handleLoginClick() {
+    handleLoginClick = (event) => {
         this.setState({ isLoggedIn: true });
     }
     
@@ -17,8 +15,7 @@ class ConditionalRendering extends React.Component {
     }
     
     render() {
-        const isLoggedIn = this.state.isLoggedIn;
-    
+        const { isLoggedIn } = this.state;
         return (
             <div>
                 <Greeting isLoggedIn={isLoggedIn} />
@@ -46,9 +43,8 @@ function LogoutButton(props) {
     );
 }
 
-function Greeting(props) {
-    return props.isLoggedIn ? <UserGreeting /> : <GuestGreeting />;
-}
+const Greeting = ({isLoggedIn}) => isLoggedIn ? <UserGreeting /> : <GuestGreeting />;
+
 
 function UserGreeting() {
     return <h1>Welcome back!</h1>;
