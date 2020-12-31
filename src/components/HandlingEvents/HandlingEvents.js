@@ -3,18 +3,18 @@ import React from 'react';
 class HandlingEvents extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { isToggleOn: props.enabled }
-        this.handleClick = this.handlerClick.bind(this);
+        this.state = { isToggleOn: props.enabled };
     }
     
-    handlerClick() {
+    handlerClick = () => {
         this.setState(state => ({
             isToggleOn: !state.isToggleOn
         }))
     }
 
     render() {
-        return <button onClick={this.handleClick}>{this.state.isToggleOn ? 'On' : 'Off'}</button>;
+        const { isToggleOn } = this.state;
+        return <button onClick={this.handlerClick}>{isToggleOn ? 'On' : 'Off'}</button>;
     }
 }
 

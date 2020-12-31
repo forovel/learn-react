@@ -4,17 +4,17 @@ import {
   Route
 } from "react-router-dom";
 
-import HelloWorld from './components/HelloWorld/HelloWorld';
-import IntroducingJsx from './components/IntroducingJsx/IntroducingJsx';
-import RenderingElements from './components/RenderingElements/RenderingElements';
-import ComponentsAndProps from './components/ComponentsAndProps/ComponentsAndProps';
-import StateAndLifecycle from "./components/StateAndLifecycle/StateAndLifecycle";
-import HandlingEvents from "./components/HandlingEvents/HandlingEvents";
-import ConditionalRendering from "./components/ConditionalRendering/ConditionalRendering";
-import ListsAndKeys from "./components/ListsAndKeys/ListsAndKeys";
-import Forms from "./components/Forms/Forms";
-import LiftingStateUp from "./components/LiftingStateUp/LiftingStateUp";
-import CompositionVsInheritance from "./components/CompositionVsInheritance/CompositionVsInheritance";
+import HelloWorld from './components/HelloWorld';
+import IntroducingJsx from './components/IntroducingJsx';
+import RenderingElements from './components/RenderingElements';
+import ComponentsAndProps from './components/ComponentsAndProps';
+import StateAndLifecycle from "./components/StateAndLifecycle";
+import HandlingEvents from "./components/HandlingEvents";
+import ConditionalRendering from "./components/ConditionalRendering";
+import ListsAndKeys from "./components/ListsAndKeys";
+import Forms from "./components/Forms";
+import LiftingStateUp from "./components/LiftingStateUp";
+import CompositionVsInheritance from "./components/CompositionVsInheritance";
 
 function App() {
   return (
@@ -40,7 +40,7 @@ function App() {
               <a href="/6">6. Handling Events</a>
             </li>
             <li>
-              <a href="/7">7. Handling Events</a>
+              <a href="/7">7. Conditional Rendering</a>
             </li>
             <li>
               <a href="/8">8. Lists and Keys</a>

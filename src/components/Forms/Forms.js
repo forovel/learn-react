@@ -4,35 +4,35 @@ class Forms extends React.Component {
     constructor(props) {
         super(props);
         this.state = { name: '', flavor: '' };
-        this.handleNameChange = this.handleNameChange.bind(this);
-        this.handleFlavorChange = this.handleFlavorChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
     
-    handleNameChange(event) {
+    handleNameChange = (event) => {
         this.setState({ name: event.target.value });
     }
 
-    handleFlavorChange(event) {
+    handleFlavorChange = (event) => {
         this.setState({ flavor: event.target.value });
     }
 
-    handleSubmit(event) {
-        alert(`Button submitted with name: ${this.state.name} and flavor: ${this.state.flavor}`);
+    handleSubmit = (event) => {
+        const { name, flavor } = this.state;
+        alert(`Button submitted with name: ${name} and flavor: ${flavor}`);
         event.preventDefault();
     }
 
     render() {
+        const { name, flavor } = this.state;
+
         return (
             <form onSubmit={this.handleSubmit}>
                 <label>
                     Name:
-                    <input type="text" value={this.state.name} onChange={this.handleNameChange} />
+                    <input type="text" value={name} onChange={this.handleNameChange} />
                 </label>
                 <br />
                 <label>
                 Pick your favorite flavor:
-                <select value={this.state.flavor} onChange={this.handleFlavorChange}>
+                <select value={flavor} onChange={this.handleFlavorChange}>
                     <option value="grapefruit">Grapefruit</option>
                     <option value="lime">Lime</option>
                     <option value="coconut">Coconut</option>

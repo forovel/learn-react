@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const ComponentsAndProps = ({ name, messagesCount }) => (
       <div>
         <h1>Hello, {name}!</h1>

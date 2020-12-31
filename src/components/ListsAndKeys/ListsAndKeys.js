@@ -1,4 +1,6 @@
 import React from 'react';
+import SideBar from './components/SideBar';
+import Content from './components/Content';
 
 class ListsAndKeys extends React.Component {
     constructor(props) {
@@ -8,35 +10,14 @@ class ListsAndKeys extends React.Component {
             { id: 2, title: 'Installation', content: 'You can install React from npm.' }
         ];
     }
-    
-    sideBar() {
-        return (
-            <ul>
-                {this.posts.map((post) =>
-                    <li key={post.id}>
-                    {post.title}
-                    </li>
-                )}
-            </ul>
-        )
-    }
-
-    content() {
-        return (this.posts.map((post) =>
-            <div key={post.id}>
-                <h3>{post.title}</h3>
-                <p>{post.content}</p>
-            </div>
-        ))
-    }
 
     render() {
         return (
             <div>
                 <hr />
-                {this.sideBar()}
+                <Content posts={this.posts} />
                 <hr />
-                {this.content()}
+                <SideBar posts={this.posts} />
             </div>
         );
     }

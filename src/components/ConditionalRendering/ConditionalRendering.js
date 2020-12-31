@@ -1,4 +1,7 @@
 import React from 'react';
+import UserGreeting from './components/UserGreeting';
+import LogoutButton from './components/LogoutButton';
+import LoginButton from './components/LoginButton';
 
 class ConditionalRendering extends React.Component {
     constructor(props) {
@@ -6,11 +9,11 @@ class ConditionalRendering extends React.Component {
         this.state = { isLoggedIn: false };
     }
     
-    handleLoginClick = (event) => {
+    handleLoginClick = () => {
         this.setState({ isLoggedIn: true });
     }
     
-    handleLogoutClick() {
+    handleLogoutClick = () => {
         this.setState({ isLoggedIn: false });
     }
     
@@ -18,7 +21,7 @@ class ConditionalRendering extends React.Component {
         const { isLoggedIn } = this.state;
         return (
             <div>
-                <Greeting isLoggedIn={isLoggedIn} />
+                <UserGreeting isLoggedIn={isLoggedIn} />
                 { isLoggedIn ? <LogoutButton onClick={this.handleLogoutClick} /> : <LoginButton onClick={this.handleLoginClick} /> }
             </div>
         );
@@ -26,30 +29,3 @@ class ConditionalRendering extends React.Component {
 }
 
 export default ConditionalRendering;
-
-function LoginButton(props) {
-    return (
-        <button onClick={props.onClick}>
-            Login
-        </button>
-    );
-}
-  
-function LogoutButton(props) {
-    return (
-        <button onClick={props.onClick}>
-            Logout
-        </button>
-    );
-}
-
-const Greeting = ({isLoggedIn}) => isLoggedIn ? <UserGreeting /> : <GuestGreeting />;
-
-
-function UserGreeting() {
-    return <h1>Welcome back!</h1>;
-}
-  
-function GuestGreeting() {
-    return <h1>Please sign up.</h1>;
-}
