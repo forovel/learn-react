@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatUser } from './IntroducingJsxUtils';
 
 const user = {
     firstName: 'Jim',
@@ -28,7 +29,3 @@ const IntroducingJsx = () => {
 };
 
 export default IntroducingJsx;
-
-const formatUser = (user) => {
-    return user.firstName + " " + user.lastName;
-};

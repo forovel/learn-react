@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const SplitPane = ({ left, right }) => {
     return (
         <div className="SplitPane">
@@ -9,6 +11,11 @@ const SplitPane = ({ left, right }) => {
             </div>
         </div>
     );
+}
+
+SplitPane.propTypes = {
+    left: PropTypes.element,
+    right: PropTypes.element
 }
 
 export default SplitPane;

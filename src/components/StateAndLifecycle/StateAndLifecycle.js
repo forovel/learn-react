@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class StateAndLifecycle extends React.Component {
     constructor(props) {
@@ -44,6 +45,10 @@ class StateAndLifecycle extends React.Component {
           </div>
         );
     }
+}
+
+StateAndLifecycle.propTypes = {
+    counter: PropTypes.number
 }
 
 export default StateAndLifecycle;

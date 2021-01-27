@@ -1,9 +1,7 @@
 import React from 'react';
-  
-const scaleNames = {
-    c: 'Celsius',
-    f: 'Fahrenheit'
-};
+import PropTypes from 'prop-types';
+
+import { scaleNames } from './../../LiftingStateUpUtils'
 
 class TemperatureInput extends React.Component {
     handleChange = (event) => {
@@ -20,6 +18,11 @@ class TemperatureInput extends React.Component {
             </fieldset>
         );
     }
+}
+
+TemperatureInput.propTypes = {
+    temperature: PropTypes.string,
+    scale: PropTypes.string
 }
 
 export default TemperatureInput;

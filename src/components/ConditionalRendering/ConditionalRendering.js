@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import UserGreeting from './components/UserGreeting';
 import LogoutButton from './components/LogoutButton';
 import LoginButton from './components/LoginButton';

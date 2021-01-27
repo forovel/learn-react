@@ -25,10 +25,10 @@ class Forms extends React.Component {
 
         return (
             <form onSubmit={this.handleSubmit}>
-                <label>
+                <label htmlFor="name">
                     Name:
-                    <input type="text" value={name} onChange={this.handleNameChange} />
                 </label>
+                <input id="name" type="text" value={name} onChange={this.handleNameChange} />
                 <br />
                 <label>
                 Pick your favorite flavor:

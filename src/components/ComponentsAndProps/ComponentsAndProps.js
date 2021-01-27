@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const ComponentsAndProps = ({ name, messagesCount }) => (
       <div>
         <h1>Hello, {name}!</h1>
@@ -6,5 +8,10 @@ export const ComponentsAndProps = ({ name, messagesCount }) => (
         </div>
       </div>
 )
+
+ComponentsAndProps.propTypes = {
+  name: PropTypes.string,
+  messagesCount: PropTypes.number
+}
 
 export default ComponentsAndProps;

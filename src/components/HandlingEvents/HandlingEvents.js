@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class HandlingEvents extends React.Component {
     constructor(props) {
@@ -16,6 +17,10 @@ class HandlingEvents extends React.Component {
         const { isToggleOn } = this.state;
         return <button onClick={this.handlerClick}>{isToggleOn ? 'On' : 'Off'}</button>;
     }
+}
+
+HandlingEvents.propTypes = {
+    enabled: PropTypes.bool
 }
 
 export default HandlingEvents;
